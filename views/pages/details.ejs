@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>DETAILS</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            DETAILS PAGE
+        </h1>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/selectData">FAV</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="all">
+            <%console.log(val)%>
+            <div class="container">
+                <h3>NAME : <%=val.name%></h3>
+                <img src="<%=val.img%>" alt="<%=val.name%>">
+                <p>LEVEL : <%=val.level%></p>
+            </div>
+            <div>
+                <form action="/update/<%=val.id%>?_method=put" method="POST">
+                    <input type="text" name="name" value="<%=val.name%>">
+                    <input type="text" name="img" value="<%=val.img%>">
+                    <input type="text" name="level" value="<%=val.level%>">
+                    <input type="submit" value="update">
+                </form>
+            </div>
+            <div>
+                <form action="/delete/<%=val.id%>?_method=delete" method="POST">
+                    <input type="submit" value="delete">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

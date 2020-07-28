@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS tabless;
+CREATE TABLE tabless(
+id SERIAL PRIMARY KEY,
+name VARCHAR(255),
+img VARCHAR(255),
+level VARCHAR(255)
+);
