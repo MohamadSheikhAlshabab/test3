@@ -28,7 +28,8 @@
                 <p>LEVEL : <%=val.level%></p>
 
                 <div>
-                    <form action="/addDb" method="get">
+                    <button class="add">toggle</button>
+                    <form action="/addDb" method="get" class="form">
                         <input type="text" value="<%=val.name%>" name="name"><br>
                         <input type="text" value="<%=val.img%>" name="img"> <br>
                         <input type="text" value="<%=val.level%>" name="level"><br>
@@ -39,6 +40,8 @@
             <%})%>
         </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/app.js"></script>
 </body>
 
 </html>
